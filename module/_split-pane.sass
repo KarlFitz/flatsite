@@ -1,0 +1,73 @@
+.split-pane
+
+	//display: table
+	
+	background: $bg-dark-light
+	color: #fff
+
+	@include row()
+	
+
+
+
+	p.lead
+		margin-bottom: 1.25em	
+
+
+
+	> div
+		width: 100%
+		display: block
+		text-align: center
+
+
+		.container
+			max-width: 490px	
+			padding: 3em 1.25em
+
+
+		@include media($small)	
+			.container
+				padding: 4em 2.5em
+
+
+
+		@include media($medium)
+			width: 50%
+			float: left
+
+			.container
+				padding: 5em 3.5em
+				float: left
+
+
+		@include media($large)	
+			.container
+				padding: 6em 5em	
+
+
+	.button
+		margin-top: 0.5em			
+
+
+
+.split-pane-right
+
+	@extend %dark
+
+
+	> div.container
+		@include media($medium)
+			float: left
+
+
+.split-pane-left
+	
+	background: $bg-dark-light
+
+	.button
+		color: #fff
+
+	> div.container
+		@include media($medium)
+			float: right

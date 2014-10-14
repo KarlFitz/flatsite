@@ -1,0 +1,111 @@
+section	
+	position: relative
+	z-index: 1
+
+	padding-top: 3.5em
+	padding-bottom: 3.5em
+
+
+	@include media($small)
+		padding-top: 5em
+		padding-bottom: 5em
+
+
+	@include media($medium)
+		padding-top: 6em
+		padding-bottom: 6em
+
+
+	&.signup
+
+		@include media($small)
+			padding-bottom: 5em
+
+		@include media($medium)
+			padding-bottom: 6.5em
+
+
+
+	.feature
+		text-align: center
+
+		h4
+			margin-bottom: 0
+			font-weight: 300
+
+		p	
+			margin-bottom: 0
+
+		p.primary
+			margin-top: 0.5em
+			margin-bottom: 0.65em
+		 
+
+		@include media(max-width 479px)
+			margin: 0 auto 3.5em auto
+			max-width: 260px
+
+			&:last-child
+				margin-bottom: 0
+
+
+		@include media($small)
+			@include span-columns(4)	
+			
+			padding: 0 1em
+
+
+
+
+
+
+.strip
+
+	padding: (2.25 * $r) 0
+
+	
+
+	&.primary
+		background: $primary
+		color: #fff		
+
+	&.dark
+		background: $bg-dark-light
+		color: #fff
+
+		h5
+			font-weight: 400	
+		
+
+
+	p,h5	
+		margin-bottom: 0	
+
+	h3
+		letter-spacing: 0.5px	
+
+	p	
+		color: $grey-xdark
+
+	
+
+
+
+
+
+
+%dark
+	background: $bg-dark
+	color: #fff
+
+	.button
+		color: #fff
+		font-weight: 400
+
+
+
+.dark	
+	@extend %dark
+
+
+

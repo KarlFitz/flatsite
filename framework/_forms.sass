@@ -1,0 +1,307 @@
+#{$all-text-inputs},
+textarea,
+select[multiple=multiple]
+
+	@include full-width
+	@include box-sizing(border-box)
+	@include transition(border-color)
+
+	border: 1px solid $grey
+	background-color: $grey-xlight
+	//border-radius: $radius
+	border-radius: 0
+	font-family: $font-1
+	font-size: $r-input
+	line-height: $input-lh
+	padding: $input-pad
+	margin-bottom: $input-bottom
+	@include appearance(none)
+	color: $grey-xdark
+	@include fade
+
+	&:focus
+		outline: none
+		border-color: $primary-dark
+
+	&[disabled]
+		background: $grey-xlight
+
+
+textarea
+	resize: vertical
+	height: 10em		
+
+
+button,
+input[type="submit"] 
+	@extend %button
+
+	background: $primary
+	color: #fff
+
+
+	@include appearance(none)
+	cursor: pointer
+	user-select: none
+	vertical-align: middle
+	white-space: nowrap	
+	@include full-width
+	@include fade
+
+
+label
+	@include full-width
+	font-size: $s
+	font-weight: 500
+	letter-spacing:	0.25px
+	font-family: $font-2
+	text-transform: uppercase
+	margin-bottom: 5px
+
+legend
+	font-weight: bold	
+
+
+fieldset
+	border: 1px solid $grey	
+	//border-radius: $radius
+	border-radius: 0
+	padding: $input-pad ($input-pad * 2)
+	margin-bottom: $input-bottom
+
+
+fieldset,
+.form-group
+
+	input[type="checkbox"]
+		height: $r
+		vertical-align: baseline
+
+	input[type="radio"]
+		height: $r
+
+	label
+		padding-left: $r * 1.45
+		display: block
+		margin-top: - ($r * 1.65)	
+		line-height: $input-lh
+		margin-bottom: $input-bottom / 2
+		font-size: $s
+		font-weight: normal	
+		font-family: $font-2
+		text-transform: uppercase
+
+
+		
+.form-group
+	margin-bottom: $input-bottom
+
+	+ .form-group
+		margin-bottom: $input-bottom * 2	
+
+	legend
+		margin-bottom: $input-bottom
+
+
+select
+	@include full-width
+	border: 1px solid $grey	
+	//border-radius: $radius
+	border-radius: 0
+	display: block
+	margin-bottom: $input-bottom
+	font-size: $r
+	height: $r * 3.125
+	padding: $input-pad
+	line-height: 1
+	-webkit-appearance: none
+	position: relative
+	background: $grey-xlight url(../img/ui/ui-select-dropdown.jpg) no-repeat 97.5% 13px 
+	background-size: 16px
+	color: $grey-xdark
+
+	@include media($small)
+		background-position: 98% 13px
+
+	@-moz-document url-prefix()
+		background: none	
+
+	&:focus
+		outline: none
+		border-color: $primary-dark
+
+	&:after
+		position: absolute
+		height: $r	
+		background: $text-color
+		content: ''
+		right: $input-pad
+		top: $input-pad
+
+
+select[multiple]
+	height: auto
+	background: none
+
+
+meter, 
+progress
+	@include full-width
+	margin-bottom: $input-bottom
+
+
+input[type="range"] 
+	@include full-width
+	margin-bottom: $input-bottom 
+	height: $r * 1.5
+
+input[type="file"]
+	@include full-width
+	font-size: $s 
+	margin-bottom: $input-bottom 
+
+
+input[type="submit"] 
+	height: 50px
+	font-weight: 400
+
+
+input[type="date"] 	
+	padding: ($input-pad * 0.9) $input-pad
+
+
+.placeholder 
+	color: #aaa
+
+
+
+
+// Event Army
+
+
+
+.form-column
+	@include span-columns(12)
+
+	@include media($s-medium)
+		@include span-columns(6)
+		@include omega(2n)
+
+
+.account-form
+	max-width: 700px
+	margin: 0 auto
+
+	padding-top: 2.5em
+
+
+.form-section-title,
+.form-section-detail
+	@include row
+
+.form-section-title
+	h5
+		color: $primary
+		text-transform: uppercase
+		padding-bottom: 6px
+		border-bottom: 1px solid $primary
+
+.form-section-detail
+	padding: ($r * 2.5) 0 ($r * 2)
+
+
+.form-container
+	@include outer-container
+	padding-bottom: 0.5em
+
+.form-profile-pic
+	
+	background: $grey-xlight
+	border: 1px solid $grey
+
+	@include span-columns(12)
+
+	@include media($small)
+		@include span-columns(4)
+
+	@include media($medium)
+		@include span-columns(2.5)	
+
+	img
+		width: 100%
+		max-width: 100%
+		display: block
+
+
+
+
+
+.form-profile-pic-info	
+	
+	padding-top: 1.5em
+
+	@include span-columns(12)
+
+
+	@include media($small)
+		@include span-columns(8)
+		padding-left: 1em
+		padding-top: 0
+
+	@include media($medium)
+		@include span-columns(9.5)	
+		padding-top: 0.5em
+
+
+
+
+.signupform
+
+	max-width: 650px
+	margin: 0 auto
+
+	@include media($s-medium)
+
+		margin-top: 2em
+
+		#{$all-text-inputs}
+			width: 70%
+			margin: 0
+			float: left
+			//border-radius: 1000px 0 0 1000px
+			border-radius: 0
+			height: 50px
+			border-right: 0
+			padding-left: 1em
+			background: #fff
+
+		input[type="submit"]	
+			width: 30%
+			margin: 0
+			float: left
+			//border-radius: 0 1000px 1000px 0 
+			border-radius: 0
+			height: 50px
+
+
+
+.referral-field
+	max-width: 400px !important
+	margin: 0 auto
+	text-align: center
+
+
+.login-form
+		
+	padding-top: 0.5em
+
+	#{$all-text-inputs}
+		margin-bottom: 8px
+
+
+.login-facebook
+	.facebook-connect-button
+		width: 100%	
+
+
+

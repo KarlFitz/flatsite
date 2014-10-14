@@ -1,0 +1,222 @@
+body
+	font-family: $font-1
+	font-size: 100%
+	color: $text-color
+	line-height: $line-height
+
+	//-webkit-font-smoothing: antialiased
+
+	@include media($small)
+		font-size: 100%
+
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-2
+	font-weight: 500
+	text-rendering: optimizeLegibility
+	text-transform: uppercase
+
+h2, h3, h4
+	font-weight: 400
+	letter-spacing: 1.5px
+
+
+h1
+	font-size: $xxl
+	line-height: $lh-xl
+
+	text-transform: uppercase
+	letter-spacing: 3px
+
+	&.lead
+		font-size: $xxl
+		position: relative
+
+		@include media ($small)
+			font-size: $xxxl	
+			//line-height: $lh-l
+
+		@include media ($medium)
+			font-size: $lead-xl * 0.75	
+
+
+		@include media ($large)
+			font-size: $lead-xl		
+	
+
+
+
+
+
+	@include media ($small)
+		font-size: $lead-xl
+		line-height: $lh-xl
+
+
+h2
+	font-size: $xxl
+	line-height: $lh-xxxl 
+
+	@include media ($small)
+		font-size: $xxxl
+		line-height: $lh-xxxl 
+
+h3
+	font-size: $l
+	line-height: $lh-l
+
+	@include media ($small)
+		font-size: $xl
+		line-height: $lh-xl
+
+h4
+	font-size: $l
+	line-height: $lh-l
+
+h5
+	font-size: $r
+	line-height: $lh-r
+	text-transform: uppercase
+	letter-spacing: 0.5px
+
+
+h6
+	font-size: $s
+	line-height: $lh-s
+
+
+h1 + p.lead
+	margin-top: 0.375em
+
+
+
+h2, h3, h4
+	&.lead
+		font-family: $font-1
+		font-weight: normal
+
+
+p
+	font-size: $l
+	line-height: $lh-l
+
+	@include media ($small)
+		line-height: $lh-r
+	
+
+
+p.lead
+	font-size: $l
+	font-weight: normal
+	
+
+	@include media ($small)
+		font-size: $xl
+		line-height: $lh-l
+
+
+	+ p
+		margin-top: -0.75em
+
+
+p.small
+	font-size: $r
+
+	
+
+
+small
+	font-size: $s	
+	line-height: $lh-s
+
+ul, ol
+	font-size: $r
+	line-height: $lh-r
+
+ul
+	padding-left: 20px
+
+	&.no-bullet
+		padding-left: 0
+
+	*
+		font-size: 1em	
+
+
+ol	
+	padding-left: 26px	
+
+	&.no-bullet
+		padding-left: 0
+
+	*
+		font-size: 1em		
+
+
+blockquote
+	font-size: $r	
+	line-height: $lh-r
+	font-style: italic
+	padding-left: $l
+	border-left: 4px solid $primary
+
+address
+	font-size: $r	
+	font-style: normal
+
+dt
+	font-size: $r	
+	font-weight: bold
+
+code
+	padding: 2px 4px
+	font-size: $r * 0.75
+	white-space: nowrap
+	color: $code-color
+	background: $code-color-light
+	border-radius: $radius
+
+pre
+	font-size: $r * 0.875
+	padding: $input-pad ($input-pad * 2)
+	background: $grey-xlight
+	border: 1px solid $grey
+	border-radius: $radius 
+
+strong, b
+	font-weight: bold
+
+em, i	
+	font-weight: italic
+
+
+
+h3, h4
+	margin-bottom: 3px
+
+h2
+	margin-bottom: 0.5em	
+
+p, blockquote, address 
+	margin-bottom: $r 
+
+
+
+
+
+
+// Specific
+// ------------------------------------------------------------------------------------	
+
+
+.work-signup-lead
+	margin-left: auto
+	margin-right: auto
+	max-width: 600px
+
+
+.amp
+	font-family: "Libre Baskerville", "Baskerville", "Goudy Old Style","Palatino","Book Antiqua", serif !important
+	font-style: italic	
+
+

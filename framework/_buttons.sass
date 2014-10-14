@@ -1,0 +1,169 @@
+%button 
+	//@include button(simple, $primary)
+	//-webkit-font-smoothing: antialiased
+  
+	font-size: $r-button
+	font-family: $font-2
+	font-weight: normal
+	line-height: $input-lh
+	text-transform: uppercase
+	background: transparent
+	border: 2px solid $primary
+	color: $text-color
+	padding: $input-pad ($input-pad * 4.5)
+	border-radius: 0
+	letter-spacing: 0.5px
+	font-weight: 500
+
+
+	&:hover,
+	&:focus
+		background: $primary-dark
+		border-color: $primary-dark
+		color: #fff
+		text-decoration: none
+
+	&:focus
+		outline: none	
+
+ 
+
+
+
+
+
+
+.button
+	@extend %button
+	@include inline-block
+
+	&.large
+		
+		padding: ($input-pad * 1.25) ($input-pad * 2.5)
+
+		@include media($small)
+			padding: ($input-pad * 1.25) ($input-pad * 5.5)
+
+
+
+	&.small
+		padding: ($input-pad * 0.675) ($input-pad * 2.25)
+
+
+	&.filled	
+		background: $primary
+		color: #fff	
+
+		&:hover
+			background: $primary-dark
+			color: #fff
+
+.button-group
+	.button
+		
+		&:first-child
+			margin-bottom: 6px	
+
+		width: 240px
+
+		@include media($small)
+			margin: 0 2px
+
+.hamburger
+	@include inline-block
+	text-align: left
+	text-indent: -9999px
+	height: 2em
+	width: 3em
+	border: 1px solid #fff
+	//border-radius: $radius
+	position: relative
+	margin-top: 1em
+	margin-left: 1.25em
+
+	&:before
+		content: ""
+		position: absolute
+		left: 0.625em
+		right: 0.625em
+		top: 0.575em
+		height: 1px
+		background: #fff
+		box-shadow: 0 6px 0 0 #fff, 0 12px 0 0 #fff
+
+
+	&:hover,
+	&:focus
+		outline: none	
+
+
+	@include media($small)	
+		margin-top: 1.75em
+		margin-left: 2em
+
+
+
+
+.menu-white
+	.hamburger
+
+		border: 1px solid $text-color
+
+		&:before
+			background: $text-color
+			box-shadow: 0 6px 0 0 $text-color, 0 12px 0 0 $text-color
+
+
+
+
+
+
+.facebook-connect-button
+	border: none
+	background: $fb-color
+	border-radius: 0
+	color: #fff
+	cursor: pointer
+	font-weight: 400
+	text-align: center
+		
+	&:hover
+		background: darken( $fb-color, 10%)
+		color: #fff
+
+
+
+
+a.call-back 
+	color: #fff
+	position: relative
+
+
+
+	&:after
+		left: 0
+		right: 0
+		bottom: -2px
+		height: 1px
+		border-bottom: 1px dotted $grey
+		content: ''
+		position: absolute
+
+
+	&:hover
+		text-decoration: none	
+
+
+
+
+
+
+.continue-block
+	text-align: center
+	margin-top: 2em
+
+
+
+
+
+

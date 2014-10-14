@@ -1,0 +1,248 @@
+.menu-bar
+	width: 100%
+	height: 65px
+	position: absolute
+	z-index: 2
+
+	@extend %dark
+
+
+	@include media($small)
+		height: 85px
+
+
+.menu-horizontal
+	background: $bg-dark
+	
+
+	> ul
+		@extend .container
+		padding-top: 1.875em
+
+
+	ul
+		@extend .no-bullet
+		text-align: left
+		text-transform: uppercase
+
+		li
+			position: relative
+			@include inline-block
+			@extend h5
+			font-weight: 400
+			padding-right: 1.25em
+			padding-left: 1.25em
+			position: relative
+
+
+			&:after
+				position: absolute
+				content: "/"
+				right: -1em
+				height: 1em
+				width: 1em
+				color: $grey-dark
+				top: -1px
+
+			&:first-child	
+				padding-left: 0
+
+			&:nth-child(3),
+			&:last-child
+				&:after
+					display: none
+									
+
+			
+			&.signinlink
+				position: absolute
+				top: 2em
+				right: 0.5em
+
+			
+			a
+				display: block
+				color: #fff
+				font-size: $s
+
+				&:hover
+					text-decoration: none	
+					color: $primary
+
+			a.button
+				margin-top: -0.5em	
+
+				&:hover
+					color: #fff	
+
+			&.active
+				a
+					color: $text-color
+
+			ul
+				position: absolute
+				left: 50%
+				margin-left: -75px
+				width: 150px
+				background: #fff
+				border: 1px solid $grey-light
+				border-top-color: #fff
+				border-radius: 0 0 $radius $radius
+				padding-bottom: 0.25em
+				top: 3.5em
+				display: none	
+
+				li
+					padding: 0 
+					display: block
+
+					a
+						padding: 0.5em 0
+						display: block
+
+					&:first-child
+						a
+							padding-top: 0	
+
+
+	@include media($large)
+		display: block
+
+
+
+
+
+.logo
+	position: absolute
+	left: 50%
+	width: 81px
+	margin-left: -40.5px
+	top: 20px
+
+	img
+		width: 100%
+		height: 100%
+
+
+	@include media($small)
+		width: 115px
+		margin-left: -57.5px
+		top: 20px
+			
+
+
+.menu-white
+	background: transparent url(../assets/menu-bg-small.png) center top no-repeat
+	color: $text-color
+
+
+	@include media($small)
+		background: transparent url(../assets/menu-bg-large.png) center top no-repeat
+		height: 85px
+
+	ul
+		li
+			&:after
+				color: $grey
+
+			a
+				color: $text-color
+				font-weight: 500
+
+				&:hover
+					color: $primary
+
+				&.button
+					color: $text-color
+					font-weight: 500
+
+					&:hover
+						color: #fff
+
+	> ul	
+		padding-top: 1.875em
+
+
+
+	.logo
+
+		top: -9px
+
+		@include media($small)
+			top: -20px
+
+
+
+@-moz-document url-prefix()
+.menu-white
+	.logo
+
+		width: 82px
+		margin-left: -41px
+
+		@include media($small)
+			width: 116px
+			margin-left: -58px
+
+
+
+.lt-ie10
+	.menu-white
+		.logo
+
+			width: 82px
+			margin-left: -41px
+
+			@include media($small)
+				width: 116px
+				margin-left: -58px
+
+
+.touch
+	.menu-white
+		.logo
+
+			width: 83px
+			margin-left: -41.5px
+			top: -12px
+
+			@include media($small)
+				width: 117px
+				margin-left: -58.5px
+				top: -23px
+
+
+
+
+
+.hamburger,
+
+
+	@include media(700px)
+		display: none
+
+
+.menu-horizontal
+	ul
+		display: none
+		
+		@include media(700px)
+			display: block
+
+		li
+			display: none
+
+
+			@include media(700px)
+				display: inline-block
+
+
+
+
+.sticky-menu-wrapper
+
+	position: relative
+	z-index: 2
+
+	@include media($max-large)
+		height: 0 !important
